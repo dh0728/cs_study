@@ -20,46 +20,15 @@
 
 각 노드가 다음 노드만 가리키는 가장 기본적인 형태다.
 
-```python
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-
-class SinglyLinkedList:
-    def __init__(self):
-        self.head = None
-
-    def append(self, data):         # 맨 뒤에 노드 추가
-        new_node = Node(data)
-        if self.head is None:
-            self.head = new_node
-            return
-        current = self.head
-        while current.next:
-            current = current.next
-        current.next = new_node
-
-    def delete(self, data):         # 특정 값의 노드 삭제
-        if self.head is None:
-            return
-        if self.head.data == data:
-            self.head = self.head.next
-            return
-        current = self.head
-        while current.next:
-            if current.next.data == data:
-                current.next = current.next.next
-                return
-            current = current.next
-
-    def print_list(self):           # 전체 출력
-        current = self.head
-        while current:
-            print(current.data, end=" → ")
-            current = current.next
-        print("None")
 ```
+Node: [data | next →]
+
+head → [1|next] → [2|next] → [3|next] → None
+```
+
+**삽입**: 새 노드의 next를 삽입 위치 다음 노드로 연결하고, 이전 노드의 next를 새 노드로 변경
+**삭제**: 삭제할 노드의 이전 노드의 next를 삭제할 노드의 next로 변경
+**탐색**: head부터 next를 따라 순서대로 이동
 
 ---
 
@@ -68,107 +37,28 @@ class SinglyLinkedList:
 각 노드가 이전 노드와 다음 노드를 모두 가리키는 형태다. 양방향 탐색이 가능하다.
 
 ```
-None ← [prev|data|next] ↔ [prev|data|next] ↔ [prev|data|next] → None
+Node: [← prev | data | next →]
+
+None ← [←|1|→] ↔ [←|2|→] ↔ [←|3|→] → None
 ```
 
-```python
-class DoublyNode:
-    def __init__(self, data):
-        self.data = data
-        self.prev = None
-        self.next = None
+**삽입**: 새 노드의 prev, next를 연결하고, 인접 노드의 prev, next도 함께 갱신
+**삭제**: 삭제할 노드의 prev, next를 서로 연결
 
-class DoublyLinkedList:
-    def __init__(self):
-        self.head = None
-
-    def append(self, data):         # 맨 뒤에 노드 추가
-        new_node = DoublyNode(data)
-        if self.head is None:
-            self.head = new_node
-            return
-        current = self.head
-        while current.next:
-            current = current.next
-        current.next = new_node
-        new_node.prev = current
-
-    def delete(self, data):         # 특정 값의 노드 삭제
-        current = self.head
-        while current:
-            if current.data == data:
-                if current.prev:
-                    current.prev.next = current.next
-                else:
-                    self.head = current.next
-                if current.next:
-                    current.next.prev = current.prev
-                return
-            current = current.next
-
-    def print_list(self):           # 전체 출력
-        current = self.head
-        while current:
-            print(current.data, end=" ↔ ")
-            current = current.next
-        print("None")
-```
+단순 연결리스트와 달리 역방향 탐색이 가능하다.
 
 ---
 
 ## 원형 연결리스트 (Circular Linked List)
 
-마지막 노드가 None이 아닌 첫 번째 노드(head)를 가리키는 형태다. 끝이 없는 순환 구조다.
+마지막 노드가 None이 아닌 head를 가리키는 형태다.
 
 ```
-[data|next] → [data|next] → [data|next] → (head로 돌아감)
+head → [1|next] → [2|next] → [3|next] → (head로 돌아감)
 ```
 
-```python
-class CircularLinkedList:
-    def __init__(self):
-        self.head = None
-
-    def append(self, data):         # 맨 뒤에 노드 추가
-        new_node = Node(data)
-        if self.head is None:
-            self.head = new_node
-            new_node.next = self.head
-            return
-        current = self.head
-        while current.next != self.head:
-            current = current.next
-        current.next = new_node
-        new_node.next = self.head
-
-    def delete(self, data):         # 특정 값의 노드 삭제
-        if self.head is None:
-            return
-        if self.head.data == data:
-            current = self.head
-            while current.next != self.head:
-                current = current.next
-            current.next = self.head.next
-            self.head = self.head.next
-            return
-        current = self.head
-        while current.next != self.head:
-            if current.next.data == data:
-                current.next = current.next.next
-                return
-            current = current.next
-
-    def print_list(self):           # 전체 출력
-        if self.head is None:
-            return
-        current = self.head
-        while True:
-            print(current.data, end=" → ")
-            current = current.next
-            if current == self.head:
-                break
-        print("(head로 돌아감)")
-```
+**삽입/삭제**: 단순 연결리스트와 동일하나, 마지막 노드의 next가 항상 head를 가리키도록 유지
+**탐색**: head로 돌아오면 순환 종료
 
 ---
 
