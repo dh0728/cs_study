@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# cs_study
-인공지능사관학교 CS스터디
-응애
-=======
 # Computer Science 정리노트
 
 > Since 2026.05.29
@@ -134,4 +129,3 @@
 
 
 
->>>>>>> e3d7bc05798c2f8dce80556ea013fc7dac0f5f09
