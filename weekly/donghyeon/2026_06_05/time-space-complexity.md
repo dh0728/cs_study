@@ -276,7 +276,7 @@ def sum_array(a: list, n: int) -> int:
 
 $O(1) < O(\log n) < O(n) < O(n \log n) < O(n^2) < O(2^n) < O(n!)$
 
-![image.png](/donghyeon/contents/data-structure/img/time-space-complexity1.png)
+![image.png](./img/time-space-complexity1.png)
 
 ### 참고자료
 
