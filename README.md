@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Computer Science 정리노트
 
 > Since 2026.05.29
@@ -56,12 +55,13 @@
 ## Data Structure (자료구조)
 
 - [시간복잡도와 공간복잡도](./contents/data-structure/time-complexity.md)
-- 선형 자료구조
-  - [배열 (Array)](./contents/data-structure/array.md)
-  - [연결리스트 (Linked List)](./contents/data-structure/linked-list.md)
-  - [벡터 (Vector)](./contents/data-structure/vector.md)
-  - [스택 (Stack)](./contents/data-structure/stack.md)
-  - [큐 (Queue)](./contents/data-structure/queue.md)
+- [선형 자료구조](./contents/data-structure/linear_str.md)
+  - [배열 (Array)](./contents/data-structure/linear_str.md#배열array)
+  - [레코드 (Record)](./contents/data-structure/linear_str.md#레코드record)
+  - [연결리스트 (Linked List)](./contents/data-structure/linear_str.md#연결리스트linked-list)
+  - [벡터 (Vector)](./contents/data-structure/linear_str.md#동적배열vector)
+  - [스택 (Stack)](./contents/data-structure/linear_str.md#스택stack)
+  - [큐 (Queue)](./contents/data-structure/linear_str.md#큐queue)
 
 📝 [면접 대비 질문](./contents/data-structure/면접대비질문.md)
 
@@ -127,7 +127,3 @@
 📝 [면접 대비 질문](./contents/design-pattern/면접대비질문.md)
 
 [🔝 목차로 돌아가기](#table-of-contents)
-
-
-
-=======
