@@ -91,7 +91,7 @@ def binary_search(arr, target):
   * "2를 몇 번 곱해야 8이 돼?" $\rightarrow$ **3번!**
 
 #### 📐 로그 표기법 정리
-$$\log_{\color{red}{밑}} {\color{blue}{진수}} = {\color{green}{지수}}$$
+## $$\log_{\color{red}{밑}} {\color{blue}{진수}} = {\color{green}{지수}}$$
 * $\color{red}{\text{밑(2)}}$ : 몇 배씩 커지는지
 * $\color{blue}{\text{진수(8)}}$ : 목표 숫자
 * $\color{green}{\text{지수(3)}}$ : 몇 번 곱했는지
