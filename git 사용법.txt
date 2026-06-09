@@ -1,0 +1,28 @@
+git 사용법
+
+.git 폴더 쪽 우클릭 git bash 실행 -> code .
+
+git branch taehoon( 내브렌치)
+
+
+git pull origin taehoon (내브랜치 당겨오기)
+
+git 폴더에 학습 한거 정리후 (로컬에서)
+
+git add . (이 파일 보낼거다.(관리하겠다)
+
+git commit -m "작업 내용 요약" (스냅샷) 
+
+git push origin taehoon (git 원격) cs 스터디 내브랜치에 올린다)  -u origin (내컴퓨터에 주소저장, git push만 하면 올라감)
+
+git hub 에서 pull requests ( hub에서 적용)
+
+merge 까지
+
+작업중 업데이트 할때
+
+git fetch origin ( 바뀐 내역 확인하기, 확인하고 pull)
+
+git pull origin taehoon
+
+git status
