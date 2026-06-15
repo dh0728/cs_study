@@ -15,7 +15,7 @@
 - **간선(Edge):** 두 정점 사이의 연결 관계를 나타내는 선. 관계 자체를 표현
 - **가중치(Weight):** 간선에 부여된 값. 거리, 비용, 시간 등 연결의 강도나 비용을 표현
 
-![image.png](./img/image.png)
+![image.png](./img_non/image.png)
 
 | 용어 | 설명 | 예시 |
 | --- | --- | --- |
@@ -44,6 +44,7 @@
 | 간선 존재 확인 | $O(1)$ | $O(V)$ |
 | 전체 간선 순회 | $O(V^2)$ | $O(V + E)$ |
 | 정점 삽입 | $O(V^2)$ | $O(1)$ |
+| 간선 추가 | $O(1)$ | $O(1)$ |
 | 공간 복잡도 | $O(V^2)$ | $O(V + E)$ |
 
 > $V$: 정점 수, $E$: 간선 수
@@ -94,6 +95,27 @@ for u, v in edges:
 # D [ 1 0 1 0 ]
 ```
 
+- 가중치 그래프는 연결 여부 대신 가중치 값을 넣는다.
+
+```python
+graph = [
+    [0, 5, 3],
+    [5, 0, 2],
+    [3, 2, 0],
+]
+```
+
+- 연결 없음을 0과 구분해야 할 때는 INF(무한대)를 사용한다.
+
+```python
+INF = 65535
+graph = [
+    [INF, 5, 3],
+    [5, INF, 2],
+    [3, 2, INF],
+]
+```
+
 - 공간을 $O(V + E)$만 사용하여 메모리 효율적
 - 간선이 적은 **희소 그래프(Sparse Graph)** 에 유리
 
@@ -125,7 +147,7 @@ for u, v in edges:
 - 왼쪽의 밀집 그래프와 오른쪽의 희소 그래프는 정점의 개수는 같고, 간선의 개수만 다름.
 - 정점의 개수가 *V*이고, 간선의 개수가 *E*일때, 인접 행렬 방식이 소모하는 메모리는 간선과는 상관없이 *O*(*V*2)이고, 인접 리스트 방식은 *O*(*V*+*E*).
 
-![image.png](./img/image%201.png)
+![image.png](./img_non/image%201.png)
 
 |  | 인접 행렬 | 인접 리스트 |
 | --- | --- | --- |
@@ -145,11 +167,11 @@ for u, v in edges:
 - **깊이(Depth):** 루트에서 해당 노드까지의 간선 수
 - **높이(Height):** 트리에서 가장 깊은 리프 노드까지의 깊이
 
-![image.png](./img/image%202.png)
+![image.png](./img_non/image%202.png)
 
-### 시간복잡도 (이진 트리 기준)
+### 시간복잡도 (이진 탐색 트리 기준)
 
-- **이진트리**(Binary Tree)는 트리 중에서도 각 노드가 최대 2개의 자식노드를 가지는 트리
+- **이진탐색트리**(BST)는 트리 중에서도 각 노드가 최대 2개의 자식노드를 가지는 트리
 
 | 연산 | 평균 | 최악 (편향 트리) |
 | --- | --- | --- |
@@ -187,7 +209,7 @@ for u, v in edges:
 - 탐색 성능 $O(\log n)$ 을 보장하기 위해 균형을 유지
 - 대표적인 구현: **AVL 트리**, **Red-Black 트리**
 
-![image.png](./img/image%203.png)
+![image.png](./img_non/image%203.png)
 
 ---
 
@@ -198,7 +220,7 @@ for u, v in edges:
 - **왼쪽 서브트리:** 현재 노드보다 **작은** 값
 - **오른쪽 서브트리:** 현재 노드보다 **큰** 값
 
-![image.png](./img/image%204.png)
+![image.png](./img_non/image%204.png)
 
 > ⚠️ 정렬된 데이터를 순서대로 삽입하면 편향 트리가 되어 성능이 $O(n)$으로 저하됨 → 이를 해결하기 위해 **균형이진탐색트리(AVL, Red-Black Tree)** 를 사용
 > 
@@ -209,7 +231,7 @@ Red Black Tree는 이진탐색트리의 문제점을 보완한 트리이다.
 - 데이터가 들어올 때 한쪽으로만 편향되게 들어오면 기존의 O(logN)의 탐색속도가 최악의 경우 O(N)으로 되버림
 - 레드 블랙 트리는 스스로 균형을 잡는 트리다.
 
-![image.png](./img/image%205.png)
+![image.png](./img_non/image%205.png)
 </details>
         
 
@@ -221,24 +243,24 @@ Red Black Tree는 이진탐색트리의 문제점을 보완한 트리이다.
 #### 종류
 
 1. **전위 순회 (Pre-order): 루트 → 왼쪽 → 오른쪽** 순서로, 부모를 먼저 방문하고 자식으로 내려간다.
-    - BST에서 정렬된 데이터를 꺼내고 싶을 때. 중위 순회를 하면 자동으로 오름차순
+    - 트리 구조 자체를 저장하거나 복사할 때. 부모를 먼저 저장해야 나중에 트리를 똑같이 복원할 수 있음
     <details>
         <summary>
             위에 이진탐색트리를 전위순회방법으로 순회하면 순회결과는?
         </summary>
         
-    ![image.png](./img/image%206.png)
+    ![image.png](./img_non/image%206.png)
     </details>
         
         
 2. **중위 순회 (In-order): 왼쪽 → 루트 → 오른쪽** 순서로, BST에서 중위 순회를 하면 항상 오름차순 정렬 결과가 나온다.
-    - 트리 구조 자체를 저장하거나 복사할 때. 부모를 먼저 저장해야 나중에 트리를 똑같이 복원할 수 있음
+    - BST에서 정렬된 데이터를 꺼내고 싶을 때. 중위 순회를 하면 자동으로 오름차순
     <details>
         <summary>
             위에 이진탐색트리를 중위순회방법으로 순회하면 순회결과는?
         </summary>
         
-    ![image.png](./img/image%207.png)
+    ![image.png](./img_non/image%207.png)
     </details>
         
         
@@ -249,9 +271,51 @@ Red Black Tree는 이진탐색트리의 문제점을 보완한 트리이다.
             위에 이진탐색트리를 후위순회방법으로 순회하면 순회결과는?
         </summary>
         
-    ![image.png](./img/image%208.png)
+    ![image.png](./img_non/image%208.png)
     </details>
 ---
+
+### 트리 표현법
+
+- 이진 트리는 left/right 두 포인터로 자식을 표현하면 되지만, 자식 수가 제한 없는 **일반 트리**는 별도의 표현법이 필요하다.
+
+### N링크 표현법
+
+- 각 노드가 자식 수만큼 포인터를 가지는 방식이다.
+- 자식 수가 노드마다 다르면 포인터 배열 크기도 달라져 메모리 낭비가 발생할 수 있다.
+
+```
+노드 A의 자식이 3개라면:
+[ data | child1 | child2 | child3 ]
+```
+
+```python
+class Node:
+    def __init__(self, data, num_children):
+        self.data     = data
+        self.children = [None] * num_children  # 자식 수만큼 배열
+```
+
+### LCRS 표현법 (Left Child Right Sibling)
+
+- 각 노드가 **첫 번째 자식(left)** 과 **다음 형제(right)** 만 가리키는 방식이다. 자식이 몇 명이든 포인터 2개로 고정된다.
+- N링크에 비해 메모리 효율이 좋고, 이진 트리와 동일한 구조를 사용하므로 구현이 간단하다.
+
+```
+        A
+      / | \
+     B  C  D     →    A
+                      |
+                      B → C → D
+```
+
+```python
+class Node:
+    def __init__(self, data):
+        self.data    = data
+        self.left    = None   # 첫 번째 자식
+        self.right   = None   # 다음 형제
+```
 
 ## 힙(Heap)
 
@@ -261,7 +325,7 @@ Red Black Tree는 이진탐색트리의 문제점을 보완한 트리이다.
 - **최소 힙(Min Heap):** 부모 노드 ≤ 자식 노드. 루트가 항상 최솟값
 - BST와 달리 **형제 노드 간의 대소 관계는 정의되지 않음**
 
-![image.png](./img/image%209.png)
+![image.png](./img_non/image%209.png)
 
 > 💡 **형제노드까지 정렬하지 않는 이유?**
   형제까지 정렬하면 삽입/삭제할 때마다 전체를 재정렬해야 해서 $O(n \log n)$이 걸린다. 하지만 부모-자식 관계만 유지하면 $O(\log n)$ 으로 충분하고, 루트에서 최솟값/최댓값만 빠르게 꺼내면 되기 때문에 형제 정렬은 굳이 하지 않는다.
@@ -335,11 +399,12 @@ Sift Up 연산
 2. 부모와 비교하면서 조건 만족할 때까지 위로 교환 (sift-up)
 <details>
     <summary>예시</summary>
-![image.png](./img/image%2010.png)
+
+![image.png](./img_non/image%2010.png)
     
-![image.png](./img/image%2011.png)
+![image.png](./img_non/image%2011.png)
     
-![image.png](./img/image%2012.png)
+![image.png](./img_non/image%2012.png)
 </details>
     
     
@@ -360,17 +425,18 @@ Sift Up 연산
     <summary>
         예시
     </summary>
-![image.png](./img/image%2013.png)
+
+![image.png](./img_non/image%2013.png)
     
-![image.png](./img/image%2014.png)
+![image.png](./img_non/image%2014.png)
     
-![image.png](./img/image%2015.png)
+![image.png](./img_non/image%2015.png)
     
-![image.png](./img/image%2016.png)
+![image.png](./img_non/image%2016.png)
     
-![image.png](./img/image%2017.png)
+![image.png](./img_non/image%2017.png)
     
-![image.png](./img/image%2018.png)
+![image.png](./img_non/image%2018.png)
     
 </details>
 
@@ -406,7 +472,7 @@ Sift Up 연산
 
 - **맵(Map)과 셋(Set)** 이 내부적으로 해시 테이블을 기반으로 구현됨
 
-![image.png](./img/image%2019.png)
+![image.png](./img_non/image%2019.png)
 
 > 💡 **해시(Hash), 해싱(Hashing), 해시함수(Hash Function)** </br>
 > **해시(Hash)** : 다양한 길이를 가진 데이터를 고정된 길이를 가진 데이터로 매핑(mapping)한 값 </br>
@@ -507,9 +573,9 @@ Sift Up 연산
 > 
 > - 입력값의 길이가 달라도 출력값은 언제나 고정된 길이의 비트열로 반환한다.
 > - 동일한 값이 입력되면 언제나 동일한 출력값을 보장한다.
-> - 단반향이기 때문에 역으로 해시함수를 통해 입력값으로 바꿀 수 없다
+> - 단방향이기 때문에 역으로 해시함수를 통해 입력값으로 바꿀 수 없다
 
-![image.png](./img/image%2020.png)
+![image.png](./img_non/image%2020.png)
 
 ---
 
@@ -532,9 +598,9 @@ Sift Up 연산
 TreeMap는 내부에 레드-블랙 트리(Red-Black Tree)의 자료구조를 이용하여 정렬을 구현한다.
 
 - 부모 키값과 비교해서 키 값이 낮은 것은 왼쪽 자식 노드에
-- 키값이 높은 것은 오른쪽 자식 노드에 Etnry 객체를 저장한다.
+- 키값이 높은 것은 오른쪽 자식 노드에 Entry 객체를 저장한다.
 
-![image.png](./img/image%2021.png)
+![image.png](./img_non/image%2021.png)
 
 ## Tree Map vs Hash Map
 
