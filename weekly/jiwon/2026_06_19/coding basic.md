@@ -231,5 +231,3 @@ C:\Users\jiwon\project\data\file.txt     (Windows)
 ../file.txt          → /Users/jiwon/file.txt   (한 단계 위로)
 ../../file.txt       → /Users/file.txt         (두 단계 위로)
 ```
-
-> 💡 코드에서 다른 파일을 불러올 때(`import`, 이미지 삽입 등)는 보통 상대경로를 쓴다. 프로젝트 폴더를 통째로 옮겨도 내부 구조만 같으면 경로가 그대로 동작하기 때문이다.
