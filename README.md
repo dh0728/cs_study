@@ -11,6 +11,7 @@
 - [About](#about)
   - [Collaborator](#collaborator)
   - [Reference](#reference)
+- [Algorithm (알고리즘)](#algorithm-알고리즘)
 - [Data Structure (자료구조)](#data-structure-자료구조)
 - [Network (네트워크)](#network-네트워크)
 - [Operating System (운영체제)](#operating-system-운영체제)
@@ -52,15 +53,42 @@
 - [WeareSoft/tech-interview](https://github.com/WeareSoft/tech-interview)
 - [jobhope/TechnicalNote](https://github.com/jobhope/TechnicalNote)
 
+
+## Algorithm (알고리즘)
+- [프로그래밍 기초(코딩-기초-입문-팁)](./contents/algoritm/coding%20basic.md#코딩-기초-입문-팁)
+  - [진법 (2진수·10진수·16진수)](./contents/algoritm/coding%20basic.md#진법)
+  - [논리회로 (Logic Circuit)](./contents/algoritm/coding%20basic.md#논리회로)
+  - [불대수 (Boolean Algebra)](./contents/algoritm/coding%20basic.md#불대수)
+  - [슈도코드 (Pseudocode)](./contents/algoritm/coding%20basic.md#슈도코드)
+  - [자주 쓰이는 약어](./contents/algoritm/coding%20basic.md#자주-쓰이는-약어)
+  - [상대경로와 절대경로](./contents/algoritm/coding%20basic.md#상대경로와-절대경로)
+- [정렬 알고리즘](./contents/algoritm/알고리즘-정렬.md#정렬-알고리즘)
+  - [선택 정렬 (Selection Sort)](./contents/algoritm/알고리즘-정렬.md#선택-정렬-selection-sort)
+  - [삽입 정렬 (Insertion Sort)](./contents/algoritm/알고리즘-정렬.md#삽입-정렬-insertion-sort)
+  - [버블 정렬 (Bubble Sort)](./contents/algoritm/알고리즘-정렬.m#버블-정렬-bubble-sort)
+  - [합병 정렬 (Merge Sort)](./contents/algoritm/알고리즘-정렬.m#합병-정렬-merge-sort)
+  - [퀵 정렬 (Quick Sort)](./contents/algoritm/알고리즘-정렬.m#퀵-정렬-quick-sort)
+  - [힙 정렬 (Heap Sort)](./contents/algoritm/알고리즘-정렬.m#힙-정렬-heap-sort)
+  - [파이썬 sorted](./contents/algoritm/알고리즘-정렬.md#-파이썬-sorted의-정렬-알고리즘-timsort)
+
 ## Data Structure (자료구조)
 
 - [시간복잡도와 공간복잡도](./contents/data-structure/time-complexity.md)
-- 선형 자료구조
-  - [배열 (Array)](./contents/data-structure/array.md)
-  - [연결리스트 (Linked List)](./contents/data-structure/linked-list.md)
-  - [벡터 (Vector)](./contents/data-structure/vector.md)
-  - [스택 (Stack)](./contents/data-structure/stack.md)
-  - [큐 (Queue)](./contents/data-structure/queue.md)
+- [선형 자료구조](./contents/data-structure/linear_str.md)
+  - [배열 (Array)](./contents/data-structure/linear_str.md#배열array)
+  - [레코드 (Record)](./contents/data-structure/linear_str.md#레코드record)
+  - [연결리스트 (Linked List)](./contents/data-structure/linear_str.md#연결리스트linked-list)
+  - [벡터 (Vector)](./contents/data-structure/linear_str.md#동적배열vector)
+  - [스택 (Stack)](./contents/data-structure/linear_str.md#스택stack)
+  - [큐 (Queue)](./contents/data-structure/linear_str.md#큐queue)
+- [비선형 자료구조](./contents//data-structure/non_linear_str.md#자료구조-비선형자료구조)
+  - [그래프 (Graph)](./contents/data-structure/non_linear_str.md#그래프graph)
+  - [트리 (Tree)](./contents/data-structure/non_linear_str.md#트리tree)
+  - [힙 (Heap)](./contents/data-structure/non_linear_str.md#힙heaph)
+  - [우선순위 큐(Priority Queue)](./contents/data-structure/non_linear_str.md#우선순위-큐priority-queue)
+  - [해시 테이블(Hash Table)](./contents/data-structure/non_linear_str.md#해시-테이블hash-table)
+  - [맵 (Map)](./contents/data-structure/non_linear_str.md#맵map)
+  - [셋 (Set)](./contents/data-structure/non_linear_str.md#셋set)
 
 📝 [면접 대비 질문](./contents/data-structure/면접대비질문.md)
 
@@ -126,6 +154,3 @@
 📝 [면접 대비 질문](./contents/design-pattern/면접대비질문.md)
 
 [🔝 목차로 돌아가기](#table-of-contents)
-
-
-
