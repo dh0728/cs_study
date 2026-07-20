@@ -112,16 +112,11 @@
 [🔝 목차로 돌아가기](#table-of-contents)
 
 ## Operating System (운영체제)
-
-- 프로세스와 스레드
-  - [프로세스 vs 스레드](./contents/operating-system/process-thread.md)
-  - [CPU 스케줄링](./contents/operating-system/cpu-scheduling.md)
-- 메모리
-  - [메모리 관리](./contents/operating-system/memory-management.md)
-  - [가상 메모리](./contents/operating-system/virtual-memory.md)
-- 동기화
-  - [교착 상태 (Deadlock)](./contents/operating-system/deadlock.md)
-  - [동기화 (Synchronization)](./contents/operating-system/synchronization.md)
+- [운영체제_공부하기전_Overview](./contents/operating-system/운영체제_공부하기전_Overview.md)
+- [운영체제와 컴퓨터](./contents/operating-system/운영체제와컴퓨터.md)
+- [메모리](./contents/operating-system/메모리.md)
+- [프로세스와 스레드](./contents/operating-system/)
+- [CPU 스케줄링](./contents/operating-system/)
 
 📝 [면접 대비 질문](./contents/operating-system/면접대비질문.md)
 
