@@ -116,7 +116,18 @@
 - [운영체제와 컴퓨터](./contents/operating-system/운영체제와컴퓨터.md)
 - [메모리](./contents/operating-system/메모리.md)
 - [프로세스와 스레드](./contents/operating-system/프로세스와_스레드.md)
+  - [프로세스](./contents/operating-system/프로세스와_스레드.md#프로세스process)
+  - [스레드](./contents/operating-system/프로세스와_스레드.md#스레드thread)
+  - [멀티프로세싱 vs 멀티스레딩](./contents/operating-system/프로세스와_스레드.md#멀티프로세싱-vs-멀티스레딩)
 - [CPU 스케줄링](./contents/operating-system/CPU%20스케줄링%20알고리즘.md)
+  - [비선점형 방식](./contents/operating-system/CPU%20스케줄링%20알고리즘.md#비선점형-방식)
+    - [FCFS(First Come, First Saved)](./contents/operating-system/CPU%20스케줄링%20알고리즘.md#fcfsfirst-come-first-saved)
+    - [SJF(Shortest Job First)](./contents/operating-system/CPU%20스케줄링%20알고리즘.md#sjfshortest-job-first)
+    - [우선순위](./contents/operating-system/CPU%20스케줄링%20알고리즘.md#우선순위)
+  - [선점형 방식](./contents/operating-system/CPU%20스케줄링%20알고리즘.md#선점형-방식)
+    - [라운드 로빈(RR, Round Robin)](./contents/operating-system/CPU%20스케줄링%20알고리즘.md#라운드-로빈rr-round-robin)
+    - [SRF(Shortest Remaining Time First)](./contents/operating-system/CPU%20스케줄링%20알고리즘.md#srfshortest-remaining-time-first)
+    - [다단계 큐](./contents/operating-system/CPU%20스케줄링%20알고리즘.md#다단계-큐)
 
 📝 [면접 대비 질문](./contents/operating-system/면접대비질문.md)
 
