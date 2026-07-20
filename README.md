@@ -115,8 +115,8 @@
 - [운영체제_공부하기전_Overview](./contents/operating-system/운영체제_공부하기전_Overview.md)
 - [운영체제와 컴퓨터](./contents/operating-system/운영체제와컴퓨터.md)
 - [메모리](./contents/operating-system/메모리.md)
-- [프로세스와 스레드](./contents/operating-system/)
-- [CPU 스케줄링](./contents/operating-system/)
+- [프로세스와 스레드](./contents/operating-system/프로세스와_스레드.md)
+- [CPU 스케줄링](./contents/operating-system/CPU%20스케줄링%20알고리즘.md)
 
 📝 [면접 대비 질문](./contents/operating-system/면접대비질문.md)
 
